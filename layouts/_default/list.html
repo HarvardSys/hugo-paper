@@ -54,14 +54,16 @@ $paginator.Pages -}}<!---->
     >Featured</span
   >
   {{- end -}}
-  <h2 class="my-0!">{{- .Title -}}</h2>
-  <time class="text-xs antialiased opacity-60"
-    >{{- .Date | time.Format ":date_medium" -}}</time
-  >
-  <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}"
-    >{{- .Title -}}</a
-  >
-</section>
+  <h2 class="!my-0 pb-1 font-bold !leading-none">
+    <a class="link block not-prose" href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+  <div class="not-prose mt-1.5">
+    <time class="text-sm antialiased opacity-60"
+      >{{ .Date | time.Format ":date_medium" }}</time
+    >
+    <div>{{ .Summary }}</div>
+    <p class="mt-1.5"><a class="link block" href="{{ .Permalink }}">Read full post →</a></p>
+  </div>
 {{- end -}}
 
 <!-- Main Nav -->
