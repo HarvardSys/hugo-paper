@@ -47,7 +47,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --w: calc(680px + 32px * 2);
+    --w: calc(900px + 32px * 2);
   }
 }
 @layer base {
@@ -1833,4 +1833,79 @@ article {
 .toc li {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.global-footer {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .global-footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .global-footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.hwp-py-12 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.hwp-flex {
+  display: flex;
+}
+.hwp-flex-col {
+  flex-direction: column;
+}
+.hwp-inline-flex {
+  display: inline-flex;
+}
+.hwp-py-20 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.white {
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .md\:hwp-flex-row {
+    flex-direction: row;
+  }
+  .md\:hwp-gap-x-32 {
+    column-gap: 2rem;
+  }
+  .md\:hwp-py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:hwp-ml-auto {
+    margin-left: auto;
+  }
+}
+
+.footer-logo {
+  min-height: .9rem;
+  width: auto;
+  max-width: 100%;
+}
+
+.box {
+  box-sizing: border-box;
 }
