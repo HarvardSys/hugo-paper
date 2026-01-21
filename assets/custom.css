@@ -1,2 +1,9 @@
 /* Place custom css here. */
 @reference './app.css';
+
+.seas-logo {
+  width: auto;
+  max-width: 527px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
