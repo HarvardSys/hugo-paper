@@ -2,9 +2,9 @@
 
 <!-- Tag Title -->
 {{- if and .Title (eq .Type "tags") -}}
-<h1 class="mb-14">#{{- .Title -}}</h1>
+<h1 class="mb-8">#{{- .Title -}}</h1>
 {{ else if .Params.showTitle -}}
-<h1 class="mb-14">{{ .Title }}</h1> 
+<h1 class="mb-8">{{ .Title }}</h1> 
 {{- end -}}
 
   <section>{{- .Content -}}</section>
@@ -63,7 +63,7 @@ $paginator.Pages -}}<!---->
   </h2>
   <div class="mt-1.5">
     {{ partial "date-people.html" . -}}
-    {{ .Summary }}
+    {{ .Summary | plainify | safeHTML }}
     <p class="mt-1.5"><a class="link block" href="{{ .Permalink }}">Read more →</a></p>
   </div>
 {{- end -}}
